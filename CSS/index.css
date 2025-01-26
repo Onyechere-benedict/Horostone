@@ -653,3 +653,29 @@ section.crystal{
 
 }
 }
+
+.write-up{
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center; 
+	height: 200px; 	
+}
+
+.write-up h4{
+	/* margin: 10px 0 0; */
+    font-size: 150px;
+	text-align: center;
+	color: #fff;
+	padding-top: 50%;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.write-up p {
+  /* margin: 10px 200px 10px; */
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  font-family: cursive;
+  margin-top: -1%;
+}
