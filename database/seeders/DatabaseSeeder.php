@@ -16,8 +16,18 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
+            'first_name' => 'Test',
+            'last_name' => 'User',
             'email' => 'test@example.com',
+            'password' => 'password'
         ]);
+
+        $this->call(UserSeeder::class);
+        $this->call(StoneSeeder::class);
+        // $this->call(StonePropertySetSeeder::class);
+        // $this->call(StoneAssociationSetSeeder::class);
+        // $this->call(StoneMiningSitesSetSeeder::class);
+        // $this->call(StoneCareCardSeeder::class);
+        // $this->call(StoneAffirmationSetSeeder::class);
     }
 }
