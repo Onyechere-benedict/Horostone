@@ -1,3 +1,13 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@source "../views";
+
+:root {
+    --accent-1: #057485;
+}
