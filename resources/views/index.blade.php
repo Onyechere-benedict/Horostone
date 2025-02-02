@@ -18,6 +18,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
             crossorigin="anonymous"></script>
+
+
+
+
+    <!-- Styles / Scripts -->
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/main.css', 'resources/css/index.css'])
+    @else
+        @vite(['resources/css/backup.tailwind.css'])
+    @endif
 </head>
 
 <body>
@@ -128,21 +138,21 @@
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-slide"
-                 style="background-image: url('/images/crystalLandscape.jpg');">
+                 style="background-image: url('/images/crystal-landscape.jpg');">
                 <div class="write-up">
                     <h4>Horostone</h4>
                     <p>unrefined pure germs</p>
                 </div>
             </div>
             <div class="carousel-slide"
-                 style="background-image: url('/images/blueCrystals.jpg');">
+                 style="background-image: url('/images/blue-crystals.jpg');">
                 <div class="write-up">
                     <h4>Horostone</h4>
                     <p>unrefined pure germs</p>
                 </div>
             </div>
             <div class="carousel-slide"
-                 style="background-image: url('/images/carousel\ \(1\).jpg');">
+                 style="background-image: url('/images/icy-crystals.jpg');">
                 <div class="write-up">
                     <h4>Horostone</h4>
                     <p>unrefined pure germs</p>
@@ -163,7 +173,7 @@
             <section class="blogs">
                 <div class="blog-card zoom-img-effect">
                     <div class="img-container">
-                        <a href="#"><img src="/images/Agate 2.JPG"
+                        <a href="#"><img src="/images/agate_2.jpg"
                                  loading="lazy"
                                  alt="" /></a>
                     </div>
@@ -183,7 +193,7 @@
 
                 <div class="blog-card-alt zoom-img-effect">
                     <div class="img-container">
-                        <a href="#"><img src="images/Amber Resin 2.JPG"
+                        <a href="#"><img src="images/amber-resin_2.jpg"
                                  alt=""
                                  loading="lazy" /></a>
                     </div>
@@ -202,7 +212,7 @@
 
                 <div class="blog-card zoom-img-effect">
                     <div class="img-container">
-                        <a href="#"><img src="/images/Amethyst 2.JPG"
+                        <a href="#"><img src="/images/amethyst_2.jpg"
                                  alt=""
                                  loading="lazy" /></a>
                     </div>
@@ -240,37 +250,37 @@
         <div class="image-carousel">
             <div class="carousel-track">
                 <!-- Repeat images to make the infinite effect -->
-                <img src="images/Black Tourmaline 2.JPG"
+                <img src="images/black-tourmaline_2.jpg"
                      alt="Image 1">
-                <img src="images/Candle Quartz 2.JPG"
+                <img src="images/candle-quartz_2.jpg"
                      alt="Image 2">
-                <img src="images/Crystal Quartz.JPG"
+                <img src="images/crystal-quartz.jpg"
                      alt="Image 3">
-                <img src="images/Fluorite.JPG"
+                <img src="images/fluorite.jpg"
                      alt="Image 4">
-                <img src="images/Iolite.JPG"
+                <img src="images/iolite.jpg"
                      alt="Image 5">
                 <!-- Duplicate images for seamless scroll -->
-                <img src="images/Black Tourmaline 2.JPG"
+                <img src="images/black-tourmaline_2.jpg"
                      alt="Image 1">
-                <img src="images/Candle Quartz 2.JPG"
+                <img src="images/candle-quartz_2.jpg"
                      alt="Image 2">
-                <img src="images/Crystal Quartz.JPG"
+                <img src="images/crystal-quartz.jpg"
                      alt="Image 3">
-                <img src="images/Fluorite.JPG"
+                <img src="images/fluorite.jpg"
                      alt="Image 4">
-                <img src="images/Iolite.JPG"
+                <img src="images/iolite.jpg"
                      alt="Image 5">
                 <!-- Duplicate images for seamless scroll -->
-                <img src="images/Black Tourmaline 2.JPG"
+                <img src="images/black-tourmaline_2.jpg"
                      alt="Image 1">
-                <img src="images/Candle Quartz 2.JPG"
+                <img src="images/candle-quartz_2.jpg"
                      alt="Image 2">
-                <img src="images/Crystal Quartz.JPG"
+                <img src="images/crystal-quartz.jpg"
                      alt="Image 3">
-                <img src="images/Fluorite.JPG"
+                <img src="images/fluorite.jpg"
                      alt="Image 4">
-                <img src="images/Iolite.JPG"
+                <img src="images/iolite.jpg"
                      alt="Image 5">
             </div>
         </div>

@@ -1,11 +1,10 @@
-@props(['active'])
+@props(['active' => false])
 
 @php
-$classes = ($active ?? false)
-            ? 'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 dark:border-indigo-600 text-sm font-medium leading-5 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out'
-            : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out';
+    $defaultClasses = "inline-block relative py-1 px-3 leading-8 rounded transition-all duration-300";
+    $defaultAfterClasses = !$active ?: "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-1/3 after:bg-white/50 after:rounded after:transition-all after:duration-300";
+    $defaultHoverClasses = "hover:bg-white hover:text-black";
+    $defaultHoverAfterClasses = !$active ?: "hover:after:bg-(--accent-1) hover:after:w-1/2";
 @endphp
 
-<a {{ $attributes->merge(['class' => $classes]) }}>
-    {{ $slot }}
-</a>
+<a {{ $attributes(['class' => "$defaultClasses $defaultAfterClasses $defaultHoverClasses $defaultHoverAfterClasses"]) }}>{{ $slot }}</a>
